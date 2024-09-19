@@ -1,6 +1,8 @@
 import { Route, Routes } from "react-router-dom"
-import Header from "./components/Header"
 import path from "./utils/path"
+import './App.css'
+import './index.css'
+
 import { Home, Public } from "./public"
 
 function App() {

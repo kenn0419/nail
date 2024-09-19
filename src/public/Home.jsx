@@ -1,8 +1,15 @@
 import React from 'react'
+import { About, Banner, Contact, NewLetter, Service } from '../components'
 
 const Home = () => {
     return (
-        <div>Home</div>
+        <div className='w-full'>
+            <Banner />
+            <About />
+            <Service />
+            <Contact />
+            <NewLetter />
+        </div>
     )
 }
 
