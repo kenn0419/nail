@@ -1,4 +1,6 @@
-import about from '../images/about.png'
+import { Link } from 'react-router-dom'
+import about from '../images/about.jpg'
+import path from '../utils/path'
 
 const About = () => {
     return (
@@ -6,9 +8,14 @@ const About = () => {
             <div className='w-[50%]'>
                 <img src={about} alt='about' className='max-w-full' />
             </div>
-            <div className='w-[50%]'>
-                <h2 className='font-banner text-main font-semibold text-[46px]'>About us</h2>
-                <p className='text-[15px] justify-center'>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+            <div className='w-[50%] flex flex-col items-center'>
+                <h2 className='font-banner text-main font-semibold text-[35px] whitespace-nowrap'>WHERE BEAUTY MEET RELAXATION!</h2>
+                <p className='text-[15px] justify-center leading-7 text-[#585e66]'>Hollywood Nails - Premier Nail Salon in Edinburgh</p>
+                <span className='mt-10 text-center leading-7 text-[#585e66]'>
+                    Here, we combine expert craftsmanship with a welcoming atmosphere to deliver nail services that stand out. Our passionate team is dedicated to bringing your nail vision to life, whether you're drawn to timeless styles like a classic manicure or seeking unique, customized nail art. At Hollywood Nails, your hands and feet are in the best care.
+                </span>
+                <span className='mt-10 text-center leading-7 text-[#585e66]'>Trust us with your next nail experience, and discover why Hollywood Nails is quickly becoming a top choice in Edinburgh. Our comprehensive range of services is designed to leave your nails looking flawless and feeling healthy every time you visit.</span>
+                <Link to={`/${path.BOOK}`} className='mt-4 py-2 px-5 bg-main text-[#fff] font-semibold text-base rounded-sm'>Book Now</Link>
             </div>
         </div>
     )
