@@ -7,7 +7,7 @@ const About = ({ showImage }) => {
     return (
         <div className='flex w-main gap-20 mt-20 items-center mx-auto'>
             {showImage && <div className='w-[50%]'>
-                <img src={about} alt='about' className='max-w-full' />
+                <img src={about} alt='about' className='w-[100%] h-[400px] object-cover' />
             </div>}
             <div className={clsx('flex flex-col items-center', showImage ? 'w-[50%]' : 'w-[960px] mx-auto')}>
                 <h2 className='font-banner text-main font-semibold text-[35px] whitespace-nowrap'>WHERE BEAUTY MEET RELAXATION!</h2>
