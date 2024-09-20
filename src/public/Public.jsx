@@ -3,7 +3,7 @@ import { Footer, Header } from '../components'
 
 const Public = () => {
     return (
-        <div className='max-h-screen overflow-y-auto relative'>
+        <div className='relative'>
             <div className='fixed top-0 left-0 right-0 bg-[#fff] z-[5] shadow-md'>
                 <Header />
             </div>

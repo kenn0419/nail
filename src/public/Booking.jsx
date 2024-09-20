@@ -189,8 +189,8 @@ const Booking = () => {
     }
     return (
         <div className='relative w-main mx-auto mt-[-50px]'>
-            <img src={about_2} alt="" className='min-w-full h-[400px] object-cover rounded-lg' />
-            <div className='flex justify-evenly mt-5'>
+            <img src={about_2} alt="" className='min-w-full h-[500px] object-cover rounded-lg' />
+            <div className='flex justify-evenly mt-5 absolute top-[450px] w-[100%]'>
                 <div className='bg-sub-main p-5 rounded-2xl w-[50%]'>
                     <h2 className='text-2xl font-semibold text-main py-2 relative before:content-[""] before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-1 before:bg-main'>Service</h2>
                     <div className='mt-5'>
@@ -292,7 +292,7 @@ const Booking = () => {
                     </div>
                 </div>
             </div >
-
+            <div className='mb-[1000px]'></div>
         </div >
     )
 }

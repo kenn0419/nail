@@ -7,7 +7,7 @@ import { About, Booking, Contact, Home, Public, Service } from "./public"
 
 function App() {
   return (
-    <div className="h-screen">
+    <div className="">
       <Routes>
         <Route path={path.PUBLIC} element={<Public />}>
           <Route path={path.HOME} element={<Home />} />
