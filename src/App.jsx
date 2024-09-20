@@ -3,7 +3,7 @@ import path from "./utils/path"
 import './App.css'
 import './index.css'
 
-import { Home, Public } from "./public"
+import { About, Contact, Home, Public, Service } from "./public"
 
 function App() {
   return (
@@ -11,6 +11,9 @@ function App() {
       <Routes>
         <Route path={path.PUBLIC} element={<Public />}>
           <Route path={path.HOME} element={<Home />} />
+          <Route path={path.ABOUT} element={<About />} />
+          <Route path={path.SERVICE} element={<Service />} />
+          <Route path={path.CONTACT} element={<Contact />} />
         </Route>
       </Routes>
     </div>

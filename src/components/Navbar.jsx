@@ -18,7 +18,7 @@ const Navbar = () => {
                     <NavLink className="font-normal" to={path.BOOK}>Book Online</NavLink>
                 </li>
                 <li className="hover:text-main transition-all delay-75">
-                    <NavLink className="font-normal" to={path.HOME}>Contact Us</NavLink>
+                    <NavLink className="font-normal" to={path.CONTACT}>Contact Us</NavLink>
                 </li>
             </ul>
         </div>
