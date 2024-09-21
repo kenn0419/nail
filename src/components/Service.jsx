@@ -34,9 +34,9 @@ const Service = () => {
     return (
         <div className="bg-sub-main my-20 py-10 relative service flex flex-col items-center">
             <h2 className='font-banner text-main font-semibold text-[46px]'>About us</h2>
-            <p className='text-[15px] font-poppins phone:text-center tablet:text-center'>
+            {/* <p className='text-[15px] font-poppins phone:text-center tablet:text-center'>
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-            </p>
+            </p> */}
             <div className='tablet:w-[100%] phone:w-[100%] tablet:flex-col  phone:flex-col  w-main mx-auto flex items-center gap-20 mt-5'>
                 <div className='grid grid-cols-2 gap-10 tablet:order-2 phone:order-2 tablet:px-3 phone:px-3'>
                     {services.map(service => (
