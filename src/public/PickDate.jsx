@@ -55,7 +55,7 @@ const PickDate = () => {
     }, [selectedTime, selectedDate, navigate])
     return (
         <div className="mt-10">
-            <div className='w-main mx-auto bg-sub-main p-6 flex gap-5 book rounded-lg'>
+            <div className='tablet:w-[100%] px-2 phone:w-[100%] tablet:flex  phone:flex tablet:flex-col phone:flex-col w-main mx-auto bg-sub-main p-6 flex gap-5 book rounded-lg'>
                 <DatePicker
                     selected={selectedDate}
                     onChange={handleDateChange}

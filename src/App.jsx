@@ -1,18 +1,26 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import path from "./utils/path"
 import './App.css'
 import './index.css'
-import { About, Booking, Contact, FormConfirm, Home, PickDate, Public, Service } from "./public"
+import { About, Booking, Contact, FormConfirm, Home, PickDate, Public, Service, Team } from "./public"
 import { Bounce, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect, useState } from "react"
 
 function App() {
+  const location = useLocation();
+  const [showMenu, setShowMenu] = useState(false);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setShowMenu(false);
+  }, [location]);
   return (
-    <div className="">
+    <div className="w-[100%]">
       <Routes>
-        <Route path={path.PUBLIC} element={<Public />}>
+        <Route path={path.PUBLIC} element={<Public showMenu={showMenu} setShowMenu={setShowMenu} />}>
           <Route path={path.HOME} element={<Home />} />
-          <Route path={path.ABOUT} element={<About />} />
+          <Route path={path.ABOUT_SERVICE} element={<About />} />
+          <Route path={path.ABOUT_TEAM} element={<Team />} />
           <Route path={path.SERVICE} element={<Service />} />
           <Route path={path.CONTACT} element={<Contact />} />
           <Route path={path.BOOK} element={<Booking />} />

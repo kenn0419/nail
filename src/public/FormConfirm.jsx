@@ -6,11 +6,6 @@ const FormConfirm = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
-    const [address, setAddress] = useState('');
-
-    const sendDataToGoogleSheets = async (data) => {
-
-    };
 
     const formatServices = (services) => {
         return services.map((service, index) => `${index + 1}. ${service.text}`).join('\n');
@@ -22,13 +17,12 @@ const FormConfirm = () => {
             name,
             phone,
             email,
-            address,
             date: localStorage.getItem('selectedDateTime'),
             service: formatServices(JSON.parse(localStorage.getItem('list'))),
             price: JSON.parse(localStorage.getItem('list')).reduce((prev, acc) => prev + acc.price, 0) + '£'
         };
         try {
-            const response = await axios.post('https://script.google.com/macros/s/AKfycbyfYo9KMx55VTUigiN5bimcGE6iVDwL3KYk-ZouCB_T6-il6OItPJPvnSr_muH85Z0/exec', bookingData, {
+            const response = await axios.post('https://script.google.com/macros/s/AKfycbxFynO0I_fijni3-G2wWf9F7rxCJsw6MA9HJGMWrkUV83D7QGcagL6XOPjjxDkSCjn3/exec', bookingData, {
                 headers: {
                     'Content-Type': 'text/plain;charset=utf-8'
                 }
@@ -63,7 +57,7 @@ const FormConfirm = () => {
                                 type="tel"
                                 className="w-[50%] p-2 border border-[#c3c3c3] mt-1 rounded-lg bg-transparent"
                                 value={phone}
-                                onChange={(e) => setPhone(e.target.value + ' ')}
+                                onChange={(e) => setPhone(e.target.value)}
                                 required
                             />
                         </div>
@@ -74,16 +68,6 @@ const FormConfirm = () => {
                                 className="w-[50%] p-2 border border-[#c3c3c3] mt-1 rounded-lg bg-transparent"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                required
-                            />
-                        </div>
-                        <div className="mb-4 w-[100%]">
-                            <label className="block text-gray-700">Address</label>
-                            <input
-                                type="text"
-                                className="w-[50%] p-2 border border-[#c3c3c3] mt-1 rounded-lg bg-transparent"
-                                value={address}
-                                onChange={(e) => setAddress(e.target.value)}
                                 required
                             />
                         </div>

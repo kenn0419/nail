@@ -159,31 +159,27 @@ const Service = () => {
         },
     ]
     return (
-        <div className='bg-service bg-center bg-cover bg-no-repeat bg-fixed relative mt-14 py-5'>
+        <div className='bg-service bg-center bg-cover bg-no-repeat bg-fixed relative mt-10 py-5'>
             <div className='bg-[#E1E1E1] absolute inset-0 z-0 opacity-75'>
             </div>
-            <div className='mx-auto w-main my-10 p-5 bg-[#fff] rounded-md relative z-1'>
+            <div className='mx-auto tablet:w-[100%] px-2 phone:w-[100%] w-main my-10 p-5 bg-[#fff] rounded-md relative z-1'>
                 <h2 className='text-center text-[46px] text-main font-semibold'>OUR SERVICES</h2>
-                <div>
-                    <div className="grid grid-cols-3 gap-5">
-                        {services.map(service => (
-                            <div className='flex flex-col items-center mb-4' key={service.id}>
-                                <img src={service.image} alt="" className='w-[105px] h-[105px] object-cover rounded-full border-[#ced4da]' />
-                                <h2 className='text-center text-[35px] text-main font-medium'>{service.text}</h2>
-                                <div className='flex flex-col w-[100%]  mt-5'>
-                                    {service.list.map(item => (
-                                        <div className='flex items-center gap-5 flex-nowrap' key={item.id}>
-                                            <h4 className='text-main w-[70%]'>{item.text}</h4>
-                                            <span className="w-[15%] relative before:block before:w-[100%] before:h-[1px] before:bg-[#000]"></span>
-                                            <span className='w-[15%] text-main'>{item.price}</span>
-                                        </div>
-                                    ))}
-                                </div>
+                <div className="tablet:grid-cols-1 px-2 phone:grid-cols-1 grid grid-cols-3 gap-5">
+                    {services.map(service => (
+                        <div className='flex flex-col items-center mb-4' key={service.id}>
+                            <img src={service.image} alt="" className='w-[105px] h-[105px] object-cover rounded-full border-[#ced4da]' />
+                            <h2 className='text-center text-[35px] text-main font-medium'>{service.text}</h2>
+                            <div className='flex flex-col w-[100%]  mt-5'>
+                                {service.list.map(item => (
+                                    <div className='flex items-center gap-5 flex-nowrap' key={item.id}>
+                                        <h4 className='text-main w-[70%]'>{item.text}</h4>
+                                        <span className="w-[15%] relative before:block before:w-[100%] before:h-[1px] before:bg-[#000]"></span>
+                                        <span className='w-[15%] text-main'>{item.price}</span>
+                                    </div>
+                                ))}
                             </div>
-                        ))}
-                    </div>
-
-
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>

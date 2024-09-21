@@ -6,3 +6,4 @@ export { default as Contact } from './Contact';
 export { default as Booking } from './Booking';
 export { default as PickDate } from './PickDate';
 export { default as FormConfirm } from './FormConfirm';
+export { default as Team } from './Team';
