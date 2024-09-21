@@ -24,8 +24,8 @@ const Contact = () => {
                 </div>
                 <div className='flex flex-col items-center gap-3'>
                     <h5 className='text-[35px] font-semibold'>Opening Hours</h5>
-                    <span>MONDAY - SUNDAY</span>
-                    <span>08:00 - 22:00</span>
+                    <span>MONDAY - SATURDAY</span>
+                    <span>09:00 - 18:30</span>
                     <div className='flex items-center gap-3'>
                         If you enjoyed your visit please kindly leave us a review. Thank you!
                     </div>

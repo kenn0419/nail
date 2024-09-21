@@ -3,7 +3,7 @@ import about_2 from '../images/about_2.jpg'
 import about_3 from '../images/about_3.jpg'
 import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { MdOutlineMailOutline } from 'react-icons/md'
 import fb from '../images/fb-icon.png'
 import insta from '../images/insta-icon.png'
@@ -14,6 +14,11 @@ import service_main_4 from '../images/service_main_4.jpg'
 import service_main_5 from '../images/service_main_5.jpg'
 import { CiCircleCheck, CiCirclePlus } from 'react-icons/ci'
 import clsx from 'clsx'
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css";
+import { addMinutes, setHours, setMinutes } from 'date-fns'
+import { TimePicker } from '../components'
+import path from '../utils/path'
 
 const services = [
     {
@@ -169,15 +174,19 @@ const services = [
 ]
 
 const Booking = () => {
+    const navigate = useNavigate();
     const [showContact, setShowContact] = useState(false);
     const [openServices, setOpenServices] = useState([]);
     const [choosedList, setChoosedList] = useState([]);
-    const [showForm, setShowForm] = useState(false);
+
+
+
     const toggleService = (id) => {
         setOpenServices((prevState) =>
             prevState.includes(id) ? prevState.filter((serviceId) => serviceId !== id) : [...prevState, id]
         );
     };
+
     const handleAddService = (item) => {
         const check = choosedList.some(el => el.id === item.id);
         if (check) {
@@ -187,49 +196,54 @@ const Booking = () => {
             setChoosedList(prev => [...prev, item]);
         }
     }
+
+    const saveToLocalStorage = () => {
+        if (choosedList.length > 0) {
+            localStorage.setItem('list', JSON.stringify(choosedList));
+            navigate(`/${path.PICK_DATE}`);
+        }
+    }
     return (
         <div className='relative w-main mx-auto mt-[-50px]'>
-            <img src={about_2} alt="" className='min-w-full h-[500px] object-cover rounded-lg' />
-            <div className='flex justify-evenly mt-5 absolute top-[450px] w-[100%]'>
+            <img src={about_2} alt="booking" className='min-w-full h-[500px] object-cover rounded-lg' />
+            <div className='flex justify-evenly mt-5'>
                 <div className='bg-sub-main p-5 rounded-2xl w-[50%]'>
                     <h2 className='text-2xl font-semibold text-main py-2 relative before:content-[""] before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-1 before:bg-main'>Service</h2>
                     <div className='mt-5'>
-                        <div>
-                            {services.map((service) => (
-                                <div key={service.id} className="mb-5">
-                                    <span
-                                        className='flex justify-between items-center uppercase cursor-pointer bg-gray-100 p-4 rounded-md'
-                                        onClick={() => toggleService(service.id)}
-                                    >
-                                        {service.text}
-                                        {openServices.includes(service.id) ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                                    </span>
+                        {services.map((service) => (
+                            <div key={service.id} className="mb-5">
+                                <span
+                                    className='flex justify-between items-center uppercase cursor-pointer bg-gray-100 p-4 rounded-md'
+                                    onClick={() => toggleService(service.id)}
+                                >
+                                    {service.text}
+                                    {openServices.includes(service.id) ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                                </span>
 
-                                    {openServices.includes(service.id) && (
-                                        <div className='flex flex-col items-center mt-3'>
-                                            {service.list.map((item) => (
-                                                <div
-                                                    key={item.id}
-                                                    className='flex items-center justify-between w-[100%] p-2 border border-[#3d3c3c] rounded-md cursor-pointer mb-2'
-                                                    onClick={() => handleAddService(item)}
-                                                >
-                                                    <div className='flex gap-3 items-center'>
-                                                        <img src={service.image} alt={service.text} className='w-[48px] h-12 rounded-md' />
-                                                        <div className="flex flex-col gap-1">
-                                                            <span>{item.text}</span>
-                                                            <span className='font-bold'>{item.price}£</span>
-                                                        </div>
+                                {openServices.includes(service.id) && (
+                                    <div className='flex flex-col items-center mt-3'>
+                                        {service.list.map((item) => (
+                                            <div
+                                                key={item.id}
+                                                className='flex items-center justify-between w-[100%] p-2 border border-[#3d3c3c] rounded-md cursor-pointer mb-2'
+                                                onClick={() => handleAddService(item)}
+                                            >
+                                                <div className='flex gap-3 items-center'>
+                                                    <img src={service.image} alt={service.text} className='w-[48px] h-12 rounded-md' />
+                                                    <div className="flex flex-col gap-1">
+                                                        <span>{item.text}</span>
+                                                        <span className='font-bold'>{item.price}£</span>
                                                     </div>
-                                                    <span>
-                                                        {choosedList.includes(item) ? <FaCheckCircle size={26} /> : <CiCirclePlus size={28} />}
-                                                    </span>
                                                 </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
+                                                <span>
+                                                    {choosedList.includes(item) ? <FaCheckCircle size={26} /> : <CiCirclePlus size={28} />}
+                                                </span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
                 <div>
@@ -270,7 +284,7 @@ const Booking = () => {
                         <h2 className='text-[28px] font-bold font-banner text-main'>Summary</h2>
                         <div>
                             {choosedList.map(item => (
-                                <div className='flex items-center justify-between mb-3'>
+                                <div className='flex items-center justify-between mb-3' key={item.id}>
                                     <h4 className='font-medium'>{item.text}</h4>
                                     <span className='font-medium'>£{item.price}</span>
                                 </div>
@@ -284,15 +298,15 @@ const Booking = () => {
                         <div className="mt-2 text-right">
                             <button
                                 className='px-5 py-2 text-[#fff] bg-main rounded-3xl'
-                                onClick={() => setShowForm(true)}
+                                onClick={saveToLocalStorage}
                             >
-                                Book
+                                Pick Hour
                             </button>
                         </div>
                     </div>
                 </div>
             </div >
-            <div className='mb-[1000px]'></div>
+
         </div >
     )
 }

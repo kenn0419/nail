@@ -23,45 +23,45 @@ const Footer = () => {
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Monday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
                     </li>
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Tuesday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
                     </li>
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Wednesday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
                     </li>
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Thursday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
                     </li>
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Friday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
                     </li>
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Saturday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
                     </li>
-                    <li className='my-3'>
+                    {/* <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Sunday</span>
-                            <span>08:00 - 20:00</span>
+                            <span>09:00 - 18:30</span>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div>

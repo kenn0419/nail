@@ -27,3 +27,76 @@ html {
     bottom: -26px;
     left: 0;
 }
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.datepicker-container {
+    width: 40%;
+    /* Điều chỉnh width của DatePicker là 40% */
+}
+
+.book .react-datepicker {
+    background-color: var(--bg-sub-main);
+    /* Đồng bộ màu nền với lớp bg-sub-main */
+    border: none;
+    width: 30%;
+    /* Đảm bảo DatePicker lấp đầy div cha */
+    font-family: 'Arial', sans-serif;
+}
+
+.book .react-datepicker__header {
+    background-color: var(--bg-sub-main);
+    /* Đồng bộ màu nền với lớp bg-sub-main */
+    border-bottom: none;
+}
+
+.book .react-datepicker__current-month,
+.book .react-datepicker__day-name,
+.book .react-datepicker__day {
+    color: black;
+    /* Màu chữ là màu trắng */
+}
+
+.book .react-datepicker__day:hover {
+    background-color: #333;
+}
+
+.book .react-datepicker__day--today {
+    border: 1px solid #ff6600;
+    /* Viền nổi bật cho ngày hôm nay */
+}
+
+.book .react-datepicker__day--selected {
+    background-color: #ff6600;
+    /* Màu nền cho ngày được chọn */
+}
+
+.book .react-datepicker__navigation--previous .react-datepicker__navigation-icon::before,
+.book .react-datepicker__navigation--next .react-datepicker__navigation-icon::before {
+    border-color: black;
+}
+
+.book .react-datepicker__navigation--previous,
+.react-datepicker__navigation--next {
+    top: 20px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Tạo khoảng cách giữa các phần tử trong flex */
+
+
+.react-datepicker-wrapper {
+    width: 100%;
+    cursor: pointer;
+}
+
+.book .react-datepicker__day--sunday {
+    text-decoration: line-through;
+    color: red;
+    /* Màu chữ đỏ cho ngày Chủ nhật */
+    opacity: 0.6;
+    /* Làm mờ các ngày Chủ nhật */
+}
