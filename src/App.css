@@ -54,9 +54,18 @@ html {
     background-color: var(--bg-sub-main);
     /* Đồng bộ màu nền với lớp bg-sub-main */
     border: none;
-    width: 30%;
     /* Đảm bảo DatePicker lấp đầy div cha */
     font-family: 'Arial', sans-serif;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+    .book .react-datepicker {
+        width: 100%;
+    }
 }
 
 .book .react-datepicker__header {
@@ -91,6 +100,10 @@ html {
     border-color: black;
 }
 
+.book .react-datepicker__navigation--next {
+    top: 20px;
+}
+
 .book .react-datepicker__navigation--previous,
 .react-datepicker__navigation--next {
     top: 20px;
@@ -106,7 +119,7 @@ html {
     cursor: pointer;
 }
 
-.book .react-datepicker__day--sunday {
+.book .react-datepicker__day.sunday {
     text-decoration: line-through;
     color: red;
     /* Màu chữ đỏ cho ngày Chủ nhật */

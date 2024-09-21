@@ -204,10 +204,10 @@ const Booking = () => {
         }
     }
     return (
-        <div className='tablet:w-[100%] px-2 phone:w-[100%] relative w-main mx-auto mt-10'>
+        <div className='tablet:w-[100%] px-2 phone:w-[100%] relative w-main mx-auto mt-28'>
             {/* <img src={about_2} alt="booking" className='min-w-full h-[500px] object-cover rounded-lg' /> */}
-            <div className='tablet:flex-col px-2 phone:flex-col tablet:gap-3 phone:gap-3 flex justify-evenly mt-5'>
-                <div className='tablet:w-[100%] px-2 phone:w-[100%] bg-sub-main p-5 rounded-2xl w-[50%] tablet:order-2 phone:order-2'>
+            <div className='tablet:grid-cols-1 px-2 phone:grid-cols-1 tablet:grid-rows-1 phone:grid-rows-1 tablet:gap-3 phone:gap-3 grid grid-cols-2 grid-rows-2 gap-5 mt-5'>
+                <div className='tablet:w-[100%] px-2 phone:w-[100%] bg-sub-main p-5 rounded-2xl tablet:order-2 phone:order-2 col-span-1 row-span-2'>
                     <h2 className='text-2xl font-semibold text-main py-2 relative before:content-[""] before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-1 before:bg-main'>Service</h2>
                     <div className='mt-5'>
                         {services.map((service) => (
@@ -246,40 +246,42 @@ const Booking = () => {
                         ))}
                     </div>
                 </div>
-                <div className={clsx('tablet:w-[100%] px-2 phone:w-[100%] tablet:order-1 phone:order-1 flex flex-col items-center w-[350px] p-5  rounded-2xl bg-sub-main gap-3', showContact ? 'h-[500px]' : 'h-[400px]')}>
-                    <img src={about_3} alt="" className='w-[128px] h-[128px] object-cover rounded-full' />
-                    <h2 className='text-[28px] font-bold font-banner text-main'>Shine My Nails</h2>
-                    <hr />
-                    <span className='flex justify-center text-center'>
-                        <FaMapMarkerAlt size={24} color='#C19847' />
-                        Hollywood nails & Beauty, 112 E Main St, Broxburn EH52 5EQ
-                    </span>
-                    <span className='flex items-center gap-2 font-semibold cursor-pointer' onClick={() => setShowContact(!showContact)}>
-                        Contact us
-                        {showContact ? <IoIosArrowUp /> : <IoIosArrowDown />}
-                    </span>
-                    {showContact && <div className=''>
-                        <div className='grid grid-cols-2 gap-3'>
-                            <a href='tel:07493458888' className='flex items-center gap-5 px-3 py-2 rounded-3xl border-2 border-[#ccc]'>
-                                <FaPhoneAlt />
-                                Phone
-                            </a>
-                            <a href='mailto:Hollywoodnailsinbroxburn@gmail.com' className='flex items-center gap-5 px-3 py-2 rounded-3xl border-2 border-[#ccc]'>
-                                <MdOutlineMailOutline size={20} />
-                                Email
-                            </a>
-                        </div>
-                        <div className='flex justify-center gap-3 mt-4'>
-                            <Link to={`https://www.facebook.com/hollywoodnailsinbroxburn`}>
-                                <img className='w-6 h-6' src={fb} alt="fb" />
-                            </Link>
-                            <Link to={`https://www.instagram.com/hollywoodnailsinbroxburn/`}>
-                                <img className='w-6 h-6' src={insta} alt="insta" />
-                            </Link>
-                        </div>
-                    </div>}
+                <div className='bg-sub-main p-5 rounded-2xl'>
+                    <div className={clsx('tablet:w-[100%] px-2 phone:w-[100%] tablet:order-1 phone:order-1 col-span-1 row-span-1 flex flex-col items-center mx-auto w-[350px] gap-3', showContact ? 'h-[500px]' : 'h-[400px]')}>
+                        <img src={about_3} alt="" className='w-[128px] h-[128px] object-cover rounded-full' />
+                        <h2 className='text-[28px] font-bold font-banner text-main'>Shine My Nails</h2>
+                        <hr />
+                        <span className='flex justify-center text-center'>
+                            <FaMapMarkerAlt size={24} color='#C19847' />
+                            Hollywood nails & Beauty, 112 E Main St, Broxburn EH52 5EQ
+                        </span>
+                        <span className='flex items-center gap-2 font-semibold cursor-pointer' onClick={() => setShowContact(!showContact)}>
+                            Contact us
+                            {showContact ? <IoIosArrowUp /> : <IoIosArrowDown />}
+                        </span>
+                        {showContact && <div className=''>
+                            <div className='grid grid-cols-2 gap-3'>
+                                <a href='tel:07493458888' className='flex items-center gap-5 px-3 py-2 rounded-3xl border-2 border-[#ccc]'>
+                                    <FaPhoneAlt />
+                                    Phone
+                                </a>
+                                <a href='mailto:Hollywoodnailsinbroxburn@gmail.com' className='flex items-center gap-5 px-3 py-2 rounded-3xl border-2 border-[#ccc]'>
+                                    <MdOutlineMailOutline size={20} />
+                                    Email
+                                </a>
+                            </div>
+                            <div className='flex justify-center gap-3 mt-4'>
+                                <Link to={`https://www.facebook.com/hollywoodnailsinbroxburn`}>
+                                    <img className='w-6 h-6' src={fb} alt="fb" />
+                                </Link>
+                                <Link to={`https://www.instagram.com/hollywoodnailsinbroxburn/`}>
+                                    <img className='w-6 h-6' src={insta} alt="insta" />
+                                </Link>
+                            </div>
+                        </div>}
+                    </div>
                 </div>
-                <div className='mt-10 bg-sub-main rounded-2xl p-5 tablet:order-3 phone:order-3'>
+                <div className='bg-sub-main rounded-2xl p-5 tablet:order-3 phone:order-3 col-span-1 row-span-1'>
                     <h2 className='text-[28px] font-bold font-banner text-main'>Summary</h2>
                     <div>
                         {choosedList.map(item => (

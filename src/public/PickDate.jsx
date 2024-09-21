@@ -19,6 +19,23 @@ const PickDate = () => {
         "18:00"
     ];
 
+    const filterAvailableTimes = () => {
+        if (!selectedDate) return times;
+
+        const now = new Date();
+        const isToday = selectedDate?.toDateString() === now.toDateString();
+
+        if (isToday) {
+            const currentMinutes = now.getHours() * 60 + now.getMinutes();
+            return times.filter((time) => {
+                const [hours, minutes] = time.split(':').map(Number);
+                const timeInMinutes = hours * 60 + minutes;
+                return timeInMinutes > currentMinutes;
+            });
+        }
+        return times;
+    };
+
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
@@ -54,8 +71,8 @@ const PickDate = () => {
         }
     }, [selectedTime, selectedDate, navigate])
     return (
-        <div className="mt-10">
-            <div className='tablet:w-[100%] px-2 phone:w-[100%] tablet:flex  phone:flex tablet:flex-col phone:flex-col w-main mx-auto bg-sub-main p-6 flex gap-5 book rounded-lg'>
+        <div className="mt-28">
+            <div className='tablet:w-[100%] px-2 phone:w-[100%] tablet:flex  phone:flex tablet:flex-col phone:flex-col tablet:items-center       phone:items-center  w-main mx-auto bg-sub-main p-6 flex gap-5 book rounded-lg'>
                 <DatePicker
                     selected={selectedDate}
                     onChange={handleDateChange}
@@ -69,7 +86,7 @@ const PickDate = () => {
 
                 {selectedDate && (
                     <>
-                        <TimePicker times={times} onTimeSelect={handleTimeSelect} />
+                        <TimePicker times={filterAvailableTimes()} onTimeSelect={handleTimeSelect} />
                     </>
                 )}
             </div>
