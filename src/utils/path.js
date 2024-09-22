@@ -9,6 +9,7 @@ const path = {
     PICK_DATE: 'pick-date',
     CONFIRM: 'confirm',
     CONTACT: 'contact',
+    THANK: 'thank-you',
     ALL: '*',
 }
 

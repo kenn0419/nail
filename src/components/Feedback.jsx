@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -98,7 +98,11 @@ const Feedback = () => {
                     768: { slidesPerView: 1, spaceBetween: 20 },
                     1024: { slidesPerView: 3, spaceBetween: 30 },
                 }}
-                modules={[Navigation, Pagination]}
+                autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }}
+                modules={[Navigation, Pagination, Autoplay]}
             >
                 {testimonials.map((testimonial, index) => (
                     <SwiperSlide key={index}>

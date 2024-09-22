@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import path from "../utils/path";
 
 const FormConfirm = () => {
+    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
@@ -29,7 +32,8 @@ const FormConfirm = () => {
             });
 
             if (response.data.status === 'success') {
-                toast.success(response.data.message)
+                // toast.success(response.data.message)
+                navigate(`/${path.THANK}`);
             }
         } catch (error) {
             console.error('Error:', error);

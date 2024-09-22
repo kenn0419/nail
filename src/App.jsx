@@ -2,7 +2,7 @@ import { Route, Routes, useLocation } from "react-router-dom"
 import path from "./utils/path"
 import './App.css'
 import './index.css'
-import { About, Booking, Contact, FormConfirm, Home, PickDate, Public, Service, Team } from "./public"
+import { About, Booking, Contact, FormConfirm, Home, PickDate, Public, Service, Team, Thanks } from "./public"
 import { Bounce, ToastContainer } from "react-toastify"
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from "react"
@@ -26,6 +26,7 @@ function App() {
           <Route path={path.BOOK} element={<Booking />} />
           <Route path={path.PICK_DATE} element={<PickDate />} />
           <Route path={path.CONFIRM} element={<FormConfirm />} />
+          <Route path={path.THANK} element={<Thanks />} />
         </Route>
       </Routes>
       <ToastContainer

@@ -58,7 +58,7 @@ const Public = ({ showMenu, setShowMenu }) => {
                     </div>
                 </div>
             )}
-            <div className='fixed top-0 left-0 right-0 bg-[#fff] z-[5] shadow-md'>
+            <div className='fixed top-0 left-0 right-0 bg-[#fff] z-10 shadow-md'>
                 <Header setShowMenu={setShowMenu} />
             </div>
             <div className="w-[100%] mt-[100px]">
