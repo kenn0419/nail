@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='px-3 tablet:w-[100%] phone:w-[100%] tablet:flex-col phone:flex-col tablet:items-center phone:items-center w-main mx-auto flex justify-between mt-10 gap-16 pb-10'>
             <Link to={`/${path.HOME}`}>
-                <img src={logo} alt="Logo" className='h-[150px] object-cover' />
+                <img src={logo} alt="Logo" className='h-[250px] object-cover' />
             </Link>
             <div className='w-[40%] tablet:w-[100%] phone:w-[100%]'>
                 <h2 className='

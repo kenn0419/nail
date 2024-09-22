@@ -20,7 +20,7 @@ const Service = () => {
         },
         {
             id: 3,
-            title: 'SNS Nail',
+            title: 'BIAB',
             desc: 'More than just nail care, we create your own style to help you feel more confident every day',
             image: service_3
         },

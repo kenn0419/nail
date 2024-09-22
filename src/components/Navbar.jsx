@@ -14,7 +14,7 @@ const Navbar = () => {
                     <span className="flex items-center justify-center">
                         About Us <MdKeyboardArrowDown size={18} />
                     </span>
-                    <ul className="hidden absolute left-0 top-[80%] w-[220px] z-10 mt-2 group-hover:block bg-[#fff] shadow-lg text-sm">
+                    <ul className="hidden absolute left-0 top-[70%] w-[220px] z-10 mt-2 group-hover:block bg-[#fff] shadow-lg text-sm">
                         <li className="p-3 transition-all delay-75">
                             <NavLink
                                 to={`/${path.ABOUT_SERVICE}`}

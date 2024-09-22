@@ -9,6 +9,8 @@ import about_5 from '../images/about_5.jpg'
 import about_6 from '../images/about_6.jpg'
 import about_7 from '../images/about_7.jpg'
 import about_8 from '../images/about_8.jpg'
+import about_9 from '../images/about_9.jpg'
+import about_10 from '../images/about_10.jpg'
 
 const About = () => {
     return (
@@ -24,6 +26,12 @@ const About = () => {
                     <img src={about_3} alt="Image 3" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
                     <img src={about_4} alt="Image 4" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
                 </div>
+
+                <div className="grid grid-cols-2 gap-1 mt-1 phone:px-2 tablet:px-2">
+                    <img src={about_9} alt="Image 3" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
+                    <img src={about_10} alt="Image 4" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
+                </div>
+
 
                 <div className="grid grid-cols-4 gap-1 mt-1 phone:px-2 tablet:px-2">
                     <img src={about_5} alt="Image 5" className="w-full h-[500px] phone:h-[200px] tablet:h-[200px]" />

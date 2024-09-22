@@ -249,7 +249,7 @@ const Booking = () => {
                 <div className='bg-sub-main p-5 rounded-2xl'>
                     <div className={clsx('tablet:w-[100%] px-2 phone:w-[100%] tablet:order-1 phone:order-1 col-span-1 row-span-1 flex flex-col items-center mx-auto w-[350px] gap-3', showContact ? 'h-[500px]' : 'h-[400px]')}>
                         <img src={about_3} alt="" className='w-[128px] h-[128px] object-cover rounded-full' />
-                        <h2 className='text-[28px] font-bold font-banner text-main'>Shine My Nails</h2>
+                        <h2 className='text-[25px] font-bold font-banner text-main'>Hollywood nails & Beauty</h2>
                         <hr />
                         <span className='flex justify-center text-center'>
                             <FaMapMarkerAlt size={24} color='#C19847' />
