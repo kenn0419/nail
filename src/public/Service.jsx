@@ -20,7 +20,7 @@ const Service = () => {
                 {
                     id: 2,
                     text: 'Glitters with colour powder',
-                    price: '£30'
+                    price: '£33'
                 },
                 {
                     id: 3,
@@ -72,7 +72,7 @@ const Service = () => {
                 {
                     id: 2,
                     text: 'Ombré infill',
-                    price: '£30'
+                    price: '£33'
                 }
             ]
         },

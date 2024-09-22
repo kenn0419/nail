@@ -18,18 +18,18 @@ const About = () => {
             <AboutComponent showImage={false} />
             <div className='mt-5'>
                 <div className="grid grid-cols-2 gap-1 phone:px-2 tablet:px-2">
-                    <img src={about_1} alt="Image 1" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
-                    <img src={about_2} alt="Image 2" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
+                    <img src={about_1} alt="Image 1" className="w-[100%] h-[718px] phone:h-[340px] tablet:h-[340px]" />
+                    <img src={about_2} alt="Image 2" className="w-[100%] h-[718px] phone:h-[340px] tablet:h-[340px]" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-1 mt-1 phone:px-2 tablet:px-2">
-                    <img src={about_3} alt="Image 3" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
-                    <img src={about_4} alt="Image 4" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
+                    <img src={about_3} alt="Image 3" className="w-[100%] h-[718px] phone:h-[340px] tablet:h-[340px]" />
+                    <img src={about_4} alt="Image 4" className="w-[100%] h-[718px] phone:h-[340px] tablet:h-[340px]" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-1 mt-1 phone:px-2 tablet:px-2">
-                    <img src={about_9} alt="Image 3" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
-                    <img src={about_10} alt="Image 4" className="w-[100%] h-[718px] phone:h-[400px] tablet:h-[400px]" />
+                    <img src={about_9} alt="Image 3" className="w-[100%] h-[718px] phone:h-[340px] tablet:h-[340px]" />
+                    <img src={about_10} alt="Image 4" className="w-[100%] h-[718px] phone:h-[340px] tablet:h-[340px]" />
                 </div>
 
 

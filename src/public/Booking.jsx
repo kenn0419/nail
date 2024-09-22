@@ -34,7 +34,7 @@ const services = [
             {
                 id: 2,
                 text: 'Glitters with colour powder',
-                price: 30
+                price: 33
             },
             {
                 id: 3,
@@ -86,7 +86,7 @@ const services = [
             {
                 id: 11,
                 text: 'Ombré infill',
-                price: 30
+                price: 33
             }
         ]
     },
