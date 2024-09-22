@@ -20,19 +20,19 @@ const FormConfirm = () => {
             name,
             phone,
             email,
-            date: localStorage.getItem('selectedDateTime'),
+            date: localStorage.getItem('selectedDate'),
+            hour: localStorage.getItem('selectedTime'),
             service: formatServices(JSON.parse(localStorage.getItem('list'))),
             price: JSON.parse(localStorage.getItem('list')).reduce((prev, acc) => prev + acc.price, 0) + '£'
         };
         try {
-            const response = await axios.post('https://script.google.com/macros/s/AKfycbxFynO0I_fijni3-G2wWf9F7rxCJsw6MA9HJGMWrkUV83D7QGcagL6XOPjjxDkSCjn3/exec', bookingData, {
+            const response = await axios.post('https://script.google.com/macros/s/AKfycbyoDvM8ieeVv2EDpmf80J7AJ3scQFDt4oOAKf0v8mIkKmMCW8EHhSQx2Y8nbuytid-4/exec', bookingData, {
                 headers: {
                     'Content-Type': 'text/plain;charset=utf-8'
                 }
             });
 
             if (response.data.status === 'success') {
-                // toast.success(response.data.message)
                 navigate(`/${path.THANK}`);
             }
         } catch (error) {
