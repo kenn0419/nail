@@ -113,10 +113,8 @@ const Feedback = () => {
                     </SwiperSlide>
                 ))}
             </Swiper>
-            {/* Navigation Buttons */}
-            <div className="swiper-button-prev"></div>
-            <div className="swiper-button-next"></div>
-            {/* Pagination */}
+            <div className="tablet:hidden phone:hidden swiper-button-prev"></div>
+            <div className="tablet:hidden phone:hidden swiper-button-next"></div>
             <div className="swiper-pagination"></div>
         </div>
     );

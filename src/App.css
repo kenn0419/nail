@@ -182,6 +182,14 @@ html {
     padding: 10px !important;
 }
 
+@media (max-width: 768px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none !important;
+    }
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
     font-size: 30px !important;
