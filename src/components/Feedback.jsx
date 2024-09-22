@@ -35,12 +35,12 @@ const testimonials = [
     //     rating: 5,
     //     description: "I’m sharing a picture of wot I asked them to do on my daughters nails and another picture of wot the girl actually done, which was a complete mess yet she still charged me £15 for it so I wouldn’t go back",
     // },
-    {
-        img: m,
-        name: "Maria",
-        rating: 5,
-        description: "Got acrylics and nail art which took abt 40mins from start to finish.  Nails were everything I wanted and matching the reference picture perfectly ✨ and they're holding up well ",
-    },
+    // {
+    //     img: m,
+    //     name: "Maria",
+    //     rating: 5,
+    //     description: "Got acrylics and nail art which took abt 40mins from start to finish.  Nails were everything I wanted and matching the reference picture perfectly ✨ and they're holding up well ",
+    // },
     {
         img: j,
         name: "Jean Miller",
