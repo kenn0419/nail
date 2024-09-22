@@ -46,7 +46,7 @@ const Team = () => {
                             <p>Each member of the team has their own niche, and with the industry forever changing its important that staff reach their own goals and potentials in offering the latest treatments and skills to develop expertise in ether the nail or beauty industry.</p>
                         </li>
                         <li>
-                            <p>Bonnie Quines is not only a beauty salon and safe space for clients, but also a training academy where I teach all aspects of nail treatments at weekends too.”</p>
+                            <p>Hollywood nails & Beauty is not only a beauty salon and safe space for clients, but also a training academy where I teach all aspects of nail treatments at weekends too.”</p>
                         </li>
                     </ul>
                 </div>
