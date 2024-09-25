@@ -60,7 +60,7 @@ const Footer = () => {
                     <li className='my-3'>
                         <div className='flex justify-between gap-16'>
                             <span>Sunday</span>
-                            <span>Off</span>
+                            <span>Closed</span>
                         </div>
                     </li>
                 </ul>
