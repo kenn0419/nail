@@ -23,14 +23,14 @@ const Navbar = () => {
                                 Services
                             </NavLink>
                         </li>
-                        <li className="p-2 transition-all delay-75">
+                        {/* <li className="p-2 transition-all delay-75">
                             <NavLink
                                 to={`/${path.ABOUT_TEAM}`}
                                 className="w-full block hover:text-main text-base"
                             >
                                 Team
                             </NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </li>
                 <li className="hover:text-main transition-all delay-75">

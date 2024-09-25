@@ -21,7 +21,7 @@ html {
 
 .service::before {
     content: '';
-    background: url(../src/images/before_service.png) repeat-x;
+    background: url(../src/images/before_service.jpg) repeat-x;
     height: 26px;
     display: block;
     position: absolute;
@@ -32,7 +32,7 @@ html {
 
 .service::after {
     content: '';
-    background: url(../src/images/after_service.png) repeat-x;
+    background: url(../src/images/after_service.jpg) repeat-x;
     height: 26px;
     display: block;
     position: absolute;
@@ -132,7 +132,7 @@ html {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    background-color: #C19847;
+    background-color: #BEE68D;
     /* Background color */
     padding: 20px;
 }

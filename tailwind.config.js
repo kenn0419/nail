@@ -22,7 +22,7 @@ export default {
     },
     backgroundColor: {
       main: '#C19847',
-      'sub-main': '#d5effb'
+      'sub-main': '#BEE68D'
     },
     fontFamily: {
       banner: "'Playfair Display', serif",

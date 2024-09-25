@@ -5,7 +5,7 @@ import clsx from 'clsx'
 
 const About = ({ showImage }) => {
     return (
-        <div className='tablet:flex-col phone:flex-col flex tablet:w-[100%] phone:w-[100%] laptop:w-main    gap-20 mt-20 items-center mx-auto'>
+        <div className='tablet:flex-col phone:flex-col flex tablet:w-[100%] phone:w-[100%] laptop:w-main gap-20 mt-20 items-center mx-auto'>
             {showImage && <div className='tablet:w-[100%] px-2 phone:w-[100%] w-[50%]'>
                 <img src={about} alt='about' className='w-[100%] h-[400px] object-cover' />
             </div>}
