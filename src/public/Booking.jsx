@@ -207,8 +207,8 @@ const Booking = () => {
         <div className='tablet:w-[100%] px-2 phone:w-[100%] relative w-main mx-auto mt-28'>
             {/* <img src={about_2} alt="booking" className='min-w-full h-[500px] object-cover rounded-lg' /> */}
             <div className='tablet:grid-cols-1 px-2 phone:grid-cols-1 tablet:grid-rows-1 phone:grid-rows-1 tablet:gap-3 phone:gap-3 grid grid-cols-2 grid-rows-2 gap-5 mt-5'>
-                <div className='tablet:w-[100%] px-2 phone:w-[100%] bg-sub-main p-5 rounded-2xl tablet:order-2 phone:order-2 col-span-1 row-span-2'>
-                    <h2 className='text-2xl font-semibold text-main py-2 relative before:content-[""] before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-1 before:bg-main'>Service</h2>
+                <div className='tablet:w-[100%] px-2 phone:w-[100%] bg-[#000] text-[#fff] p-5 rounded-2xl tablet:order-2 phone:order-2 col-span-1 row-span-2'>
+                    <h2 className='text-2xl font-semibold text-[#fff] py-2 relative before:content-[""] before:absolute before:left-0 before:bottom-0 before:w-[50px] before:h-1 before:bg-[#fff]'>Service</h2>
                     <div className='mt-5'>
                         {services.map((service) => (
                             <div key={service.id} className="mb-5">
@@ -246,10 +246,10 @@ const Booking = () => {
                         ))}
                     </div>
                 </div>
-                <div className='bg-sub-main p-5 rounded-2xl'>
+                <div className='bg-[#000] p-5 rounded-2xl text-[#fff]'>
                     <div className={clsx('tablet:w-[100%] px-2 phone:w-[100%] tablet:order-1 phone:order-1 col-span-1 row-span-1 flex flex-col items-center mx-auto w-[350px] gap-3', showContact ? 'h-[500px]' : 'h-[400px]')}>
                         <img src={about_3} alt="" className='w-[128px] h-[128px] object-cover rounded-full' />
-                        <h2 className='text-[25px] font-bold font-banner text-main'>Hollywood nails & Beauty</h2>
+                        <h2 className='text-[25px] font-bold font-banner text-[#edba55]'>Hollywood nails & Beauty</h2>
                         <hr />
                         <span className='flex justify-center text-center'>
                             <FaMapMarkerAlt size={24} color='#C19847' />
@@ -281,8 +281,8 @@ const Booking = () => {
                         </div>}
                     </div>
                 </div>
-                <div className='bg-sub-main rounded-2xl p-5 tablet:order-3 phone:order-3 col-span-1 row-span-1'>
-                    <h2 className='text-[28px] font-bold font-banner text-main'>Summary</h2>
+                <div className='bg-[#000] text-[#fff] rounded-2xl p-5 tablet:order-3 phone:order-3 col-span-1 row-span-1'>
+                    <h2 className='text-[28px] font-bold font-banner text-[#fff]'>Summary</h2>
                     <div>
                         {choosedList.map(item => (
                             <div className='flex items-center justify-between mb-3' key={item.id}>
@@ -298,7 +298,7 @@ const Booking = () => {
                     </div>
                     <div className="mt-2 text-right">
                         <button
-                            className='px-5 py-2 text-[#fff] bg-main rounded-3xl'
+                            className='px-5 py-2 text-[#000] bg-[#fff] rounded-3xl font-semibold'
                             onClick={saveToLocalStorage}
                         >
                             Pick Hour

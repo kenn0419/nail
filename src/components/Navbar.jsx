@@ -7,10 +7,10 @@ const Navbar = () => {
     return (
         <div>
             <ul className="flex gap-8 text-lg">
-                <li className="transition-all delay-75">
+                {/* <li className="transition-all delay-75">
                     <NavLink className="font-normal" to={path.HOME}>Home</NavLink>
-                </li>
-                <li className="transition-all delay-75 relative group">
+                </li> */}
+                {/* <li className="transition-all delay-75 relative group">
                     <span className="flex items-center justify-center">
                         About Us <MdKeyboardArrowDown size={18} />
                     </span>
@@ -23,25 +23,25 @@ const Navbar = () => {
                                 Services
                             </NavLink>
                         </li>
-                        {/* <li className="p-2 transition-all delay-75">
+                        <li className="p-2 transition-all delay-75">
                             <NavLink
                                 to={`/${path.ABOUT_TEAM}`}
                                 className="w-full block hover:text-main text-base"
                             >
                                 Team
                             </NavLink>
-                        </li> */}
+                        </li>
                     </ul>
                 </li>
                 <li className="hover:text-main transition-all delay-75">
                     <NavLink className="font-normal" to={path.SERVICE}>Services</NavLink>
-                </li>
+                </li> */}
                 <li className="hover:text-main transition-all delay-75">
-                    <NavLink className="font-normal" to={path.BOOK}>Book Online</NavLink>
+                    <NavLink className="font-normal" to={`/`}>Book Online</NavLink>
                 </li>
-                <li className="hover:text-main transition-all delay-75">
+                {/* <li className="hover:text-main transition-all delay-75">
                     <NavLink className="font-normal" to={path.CONTACT}>Contact Us</NavLink>
-                </li>
+                </li> */}
             </ul>
         </div>
     )

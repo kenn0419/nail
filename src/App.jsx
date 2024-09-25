@@ -18,12 +18,12 @@ function App() {
     <div className="w-[100%]">
       <Routes>
         <Route path={path.PUBLIC} element={<Public showMenu={showMenu} setShowMenu={setShowMenu} />}>
-          <Route path={path.HOME} element={<Home />} />
+          {/* <Route path={path.HOME} element={<Home />} />
           <Route path={path.ABOUT_SERVICE} element={<About />} />
           <Route path={path.ABOUT_TEAM} element={<Team />} />
           <Route path={path.SERVICE} element={<Service />} />
-          <Route path={path.CONTACT} element={<Contact />} />
-          <Route path={path.BOOK} element={<Booking />} />
+          <Route path={path.CONTACT} element={<Contact />} /> */}
+          <Route path={`/`} element={<Booking />} />
           <Route path={path.PICK_DATE} element={<PickDate />} />
           <Route path={path.CONFIRM} element={<FormConfirm />} />
           <Route path={path.THANK} element={<Thanks />} />

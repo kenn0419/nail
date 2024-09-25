@@ -41,8 +41,8 @@ const FormConfirm = () => {
     }
     return (
         <div className='w-main mx-auto mt-5'>
-            <form onSubmit={handleSubmit} className="w-[80%] p-4 bg-sub-main shadow-md rounded-md">
-                <h2 className="text-[46px] font-bold mb-4 text-main uppercase font-banner">Your Details</h2>
+            <form onSubmit={handleSubmit} className="w-[80%] p-4 bg-[#000] text-[#fff] shadow-md rounded-md">
+                <h2 className="text-[46px] font-bold mb-4 text-[#e5a72b] uppercase font-banner">Your Details</h2>
                 <div className='flex gap-6 justify-between w-[100%]'>
                     <div className='w-[70%]'>
                         <div className="mb-4 w-[100%]">
@@ -77,7 +77,7 @@ const FormConfirm = () => {
                         </div>
                     </div>
                 </div>
-                <button type="submit" className="w-full bg-main text-[#fff] uppercase font-semibold py-2 px-4 rounded-md outline-none">Confirm</button>
+                <button type="submit" className="w-full bg-[#fff] text-[#000] uppercase font-semibold py-2 px-4 rounded-md outline-none">Confirm</button>
 
             </form>
         </div>

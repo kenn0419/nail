@@ -77,7 +77,7 @@ html {
 .book .react-datepicker__current-month,
 .book .react-datepicker__day-name,
 .book .react-datepicker__day {
-    color: black;
+    color: white;
     /* Màu chữ là màu trắng */
 }
 

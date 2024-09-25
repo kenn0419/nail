@@ -16,7 +16,7 @@ const Footer = () => {
                     text-[#222] text-2xl py-2 
                     relative before:content-[""] 
                     before:absolute before:bottom-0 before:left-0 
-                    before:w-[50%] before:h-[3px] before:bg-main'
+                    before:w-[50%] before:h-[3px] before:bg-[#000]'
                 >
                     Opening Hours
                 </h2>
@@ -70,7 +70,7 @@ const Footer = () => {
                     text-[#222] text-2xl py-2 
                     relative before:content-[""] 
                     before:absolute before:bottom-0 before:left-0 
-                    before:w-[50%] before:h-[3px] before:bg-main'
+                    before:w-[50%] before:h-[3px] before:bg-[#000]'
                 >
                     Contact infomation
                 </h2>
