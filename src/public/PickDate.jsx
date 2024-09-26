@@ -34,6 +34,8 @@ const PickDate = () => {
         fetchBookedTimes();
     }, []);
 
+    console.log(bookedTimes)
+
     // Hàm lọc giờ khả dụng, loại bỏ các giờ đã đặt trong ngày được chọn
     const filterAvailableTimes = () => {
         if (!selectedDate) return times;
@@ -52,15 +54,17 @@ const PickDate = () => {
             });
         }
 
+        // Định dạng ngày được chọn thành 'dd/MM/yyyy'
+        const formattedDate = selectedDate.toLocaleDateString('en-GB');
+
         // Lọc giờ đã đặt trong ngày được chọn
-        const formattedDate = selectedDate.toLocaleDateString('en-GB'); // Định dạng ngày 'dd/MM/yyyy'
         const bookedTimesForDay = bookedTimes.filter(
             (timeSlot) => timeSlot.date === formattedDate // Kiểm tra nếu ngày đã đặt trùng với ngày được chọn
         );
 
         // Loại bỏ những giờ đã đặt
         return availableTimes.filter((time) => {
-            return !bookedTimesForDay.some((bookedTime) => bookedTime.time.startsWith(time)); // Ẩn những giờ đã đặt
+            return !bookedTimesForDay.some((bookedTime) => bookedTime.time === time); // Ẩn những giờ đã đặt
         });
     };
 

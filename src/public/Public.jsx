@@ -19,7 +19,7 @@ const Public = ({ showMenu, setShowMenu }) => {
                             <IoMdClose size={24} cursor={"pointer"} />
                         </span>
                         <ul className="flex gap-8 text-lg phone:flex tablet:flex flex-col laptop:hidden">
-                            <li className="transition-all delay-75">
+                            {/* <li className="transition-all delay-75">
                                 <NavLink className="font-normal" to={path.HOME}>Home</NavLink>
                             </li>
                             <li className="transition-all delay-75 relative group">
@@ -47,13 +47,13 @@ const Public = ({ showMenu, setShowMenu }) => {
                             </li>
                             <li className="hover:text-main transition-all delay-75">
                                 <NavLink className="font-normal" to={path.SERVICE}>Services</NavLink>
-                            </li>
+                            </li> */}
                             <li className="hover:text-main transition-all delay-75">
-                                <NavLink className="font-normal" to={path.BOOK}>Book Online</NavLink>
+                                <NavLink className="font-normal" to={`/`}>Book Online</NavLink>
                             </li>
-                            <li className="hover:text-main transition-all delay-75">
+                            {/* <li className="hover:text-main transition-all delay-75">
                                 <NavLink className="font-normal" to={path.CONTACT}>Contact Us</NavLink>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>

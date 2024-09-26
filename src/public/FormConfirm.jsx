@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import path from "../utils/path";
+import emailjs from '@emailjs/browser'
 
 const FormConfirm = () => {
     const navigate = useNavigate();
@@ -14,9 +15,18 @@ const FormConfirm = () => {
         return services.map((service, index) => `${index + 1}. ${service.text}`).join('\n');
     };
 
+    const validateEmail = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
     const handleSubmit = async (e) => {
+        const serviceID = 'service_13pvma7';
+        const templateID = 'template_azfyqpq';
+        const publicKey = '5otKs7iTe7Dj4vwbU';
         e.preventDefault();
         const bookingData = {
+            to_name: 'duongtran31072002@gmail.com',
             name,
             phone,
             email,
@@ -25,6 +35,12 @@ const FormConfirm = () => {
             service: formatServices(JSON.parse(localStorage.getItem('list'))),
             price: JSON.parse(localStorage.getItem('list')).reduce((prev, acc) => prev + acc.price, 0) + '£'
         };
+
+        if (!validateEmail(bookingData.email)) {
+            toast.error("Invalid email address");
+            return;
+        }
+
         try {
             const response = await axios.post('https://script.google.com/macros/s/AKfycbyoDvM8ieeVv2EDpmf80J7AJ3scQFDt4oOAKf0v8mIkKmMCW8EHhSQx2Y8nbuytid-4/exec', bookingData, {
                 headers: {
@@ -33,7 +49,16 @@ const FormConfirm = () => {
             });
 
             if (response.data.status === 'success') {
-                navigate(`/${path.THANK}`);
+                emailjs.send(serviceID, templateID, bookingData, publicKey)
+                    .then((response) => {
+                        console.log('Email sent successfully!', response.status, response.text);
+                        navigate(`/${path.THANK}`);
+                    })
+                    .catch((error) => {
+                        console.error('Failed to send email:', error);
+                    });
+            } else {
+                toast.error('Failed to submit booking. Please try again.');
             }
         } catch (error) {
             console.error('Error:', error);
