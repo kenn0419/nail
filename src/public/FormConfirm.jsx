@@ -26,7 +26,6 @@ const FormConfirm = () => {
         const publicKey = '5otKs7iTe7Dj4vwbU';
         e.preventDefault();
         const bookingData = {
-            to_name: 'duongtran31072002@gmail.com',
             name,
             phone,
             email,
@@ -52,6 +51,13 @@ const FormConfirm = () => {
                 emailjs.send(serviceID, templateID, bookingData, publicKey)
                     .then((response) => {
                         console.log('Email sent successfully!', response.status, response.text);
+                    })
+                    .catch((error) => {
+                        console.error('Failed to send email:', error);
+                    });
+
+                emailjs.send(serviceID, 'template_lc6m78q', bookingData, publicKey)
+                    .then((response) => {
                         navigate(`/${path.THANK}`);
                     })
                     .catch((error) => {
